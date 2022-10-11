@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import "./header.css";
-import { Link } from "react-router-dom";
 import { nav } from "../../data/Data";
+import { Link } from "react-router-dom";
 
 const Header = () => {
-  const [navList, setnavList] = useState(false);
+  const [navList, setNavList] = useState(false);
+
   return (
     <>
       <header>
@@ -26,17 +27,17 @@ const Header = () => {
               <span>2</span> My List
             </h4>
             <button className="btn1">
-              <i className="fa fa-sign-out"> </i> Sign In
+              <i className="fa fa-sign-out"></i> Sign In
             </button>
           </div>
 
           <div className="toggle">
-            <button onClick={() => setnavList(!navList)}>
-              {navList ? 
+            <button onClick={() => setNavList(!navList)}>
+              {navList ? (
                 <i className="fa fa-times"></i>
-                : 
+              ) : (
                 <i className="fa fa-bars"></i>
-              }
+              )}
             </button>
           </div>
         </div>
